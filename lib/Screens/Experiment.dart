@@ -17,18 +17,15 @@ class _HomesrcState extends State<Homesrc> with SingleTickerProviderStateMixin {
       backgroundColor: Colors.black,
       body: Column(children: <Widget>[
         count == 0 ? MaterialBreathe() : CupertinoBreathe(),
-        RaisedButton(onPressed: (){
+        RaisedButton(onPressed: () {
           setState(() {
-            if(count == 0){
+            if (count == 0) {
               count = 1;
               print("Value of Count is 1");
-            }
-            else{
+            } else {
               count = 0;
               print("Value of Count is 0");
             }
-            
-            
           });
         })
       ]),

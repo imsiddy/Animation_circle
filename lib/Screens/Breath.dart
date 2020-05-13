@@ -37,16 +37,7 @@ class _CupertinoBreatheState extends State<CupertinoBreathe>
     _controller = AnimationController(
       duration: Duration(seconds: sec),
       vsync: this,
-    )..addStatusListener(
-      (status) {
-        if (status == AnimationStatus.completed) {
-          _controller.reverse();
-        }
-        if (status == AnimationStatus.dismissed) {
-          _controller.forward();
-        }
-      },
-    );
+    )..repeat(reverse: true);
     // ..repeat(reverse: true);
     // _controller.addStatusListener(
     //   (status) {
